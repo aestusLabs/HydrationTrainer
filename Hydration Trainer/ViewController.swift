@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // Test
+    
+    func testFunction() {
+        print("This does nothing")
+    }
+    
     
     var goal = 5000
     var totalWaterConsumed = 0
