@@ -15,6 +15,9 @@
 		462AD19C1DBFE481001091F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462AD19A1DBFE481001091F9 /* LaunchScreen.storyboard */; };
 		462AD1A71DBFE481001091F9 /* Hydration_TrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AD1A61DBFE481001091F9 /* Hydration_TrainerTests.swift */; };
 		462AD1B21DBFE481001091F9 /* Hydration_TrainerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AD1B11DBFE481001091F9 /* Hydration_TrainerUITests.swift */; };
+		462AD1C01DBFE4B5001091F9 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AD1BF1DBFE4B5001091F9 /* Time.swift */; };
+		462AD1C21DBFE4CD001091F9 /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AD1C11DBFE4CD001091F9 /* Interval.swift */; };
+		462AD1C41DBFE4F5001091F9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AD1C31DBFE4F4001091F9 /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		462AD1AD1DBFE481001091F9 /* Hydration TrainerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hydration TrainerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		462AD1B11DBFE481001091F9 /* Hydration_TrainerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydration_TrainerUITests.swift; sourceTree = "<group>"; };
 		462AD1B31DBFE481001091F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		462AD1BF1DBFE4B5001091F9 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		462AD1C11DBFE4CD001091F9 /* Interval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
+		462AD1C31DBFE4F4001091F9 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,9 @@
 			children = (
 				462AD18E1DBFE481001091F9 /* AppDelegate.swift */,
 				462AD1901DBFE481001091F9 /* ViewController.swift */,
+				462AD1BF1DBFE4B5001091F9 /* Time.swift */,
+				462AD1C11DBFE4CD001091F9 /* Interval.swift */,
+				462AD1C31DBFE4F4001091F9 /* StartViewController.swift */,
 				462AD1921DBFE481001091F9 /* Main.storyboard */,
 				462AD1981DBFE481001091F9 /* Assets.xcassets */,
 				462AD19A1DBFE481001091F9 /* LaunchScreen.storyboard */,
@@ -265,9 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				462AD1C21DBFE4CD001091F9 /* Interval.swift in Sources */,
+				462AD1C01DBFE4B5001091F9 /* Time.swift in Sources */,
 				462AD1911DBFE481001091F9 /* ViewController.swift in Sources */,
 				462AD18F1DBFE481001091F9 /* AppDelegate.swift in Sources */,
 				462AD1971DBFE481001091F9 /* Hydration_Trainer.xcdatamodeld in Sources */,
+				462AD1C41DBFE4F5001091F9 /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
