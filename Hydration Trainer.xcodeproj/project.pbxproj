@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		462AD18F1DBFE481001091F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AD18E1DBFE481001091F9 /* AppDelegate.swift */; };
+		462AD1911DBFE481001091F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AD1901DBFE481001091F9 /* ViewController.swift */; };
+		462AD1941DBFE481001091F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462AD1921DBFE481001091F9 /* Main.storyboard */; };
+		462AD1971DBFE481001091F9 /* Hydration_Trainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 462AD1951DBFE481001091F9 /* Hydration_Trainer.xcdatamodeld */; };
+		462AD1991DBFE481001091F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 462AD1981DBFE481001091F9 /* Assets.xcassets */; };
+		462AD19C1DBFE481001091F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462AD19A1DBFE481001091F9 /* LaunchScreen.storyboard */; };
+		462AD1A71DBFE481001091F9 /* Hydration_TrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AD1A61DBFE481001091F9 /* Hydration_TrainerTests.swift */; };
+		462AD1B21DBFE481001091F9 /* Hydration_TrainerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AD1B11DBFE481001091F9 /* Hydration_TrainerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		462AD1A31DBFE481001091F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 462AD1831DBFE481001091F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 462AD18A1DBFE481001091F9;
+			remoteInfo = "Hydration Trainer";
+		};
+		462AD1AE1DBFE481001091F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 462AD1831DBFE481001091F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 462AD18A1DBFE481001091F9;
+			remoteInfo = "Hydration Trainer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		462AD18B1DBFE481001091F9 /* Hydration Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hydration Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		462AD18E1DBFE481001091F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		462AD1901DBFE481001091F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		462AD1931DBFE481001091F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		462AD1961DBFE481001091F9 /* Hydration_Trainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hydration_Trainer.xcdatamodel; sourceTree = "<group>"; };
+		462AD1981DBFE481001091F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		462AD19B1DBFE481001091F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		462AD19D1DBFE481001091F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		462AD1A21DBFE481001091F9 /* Hydration TrainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hydration TrainerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		462AD1A61DBFE481001091F9 /* Hydration_TrainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydration_TrainerTests.swift; sourceTree = "<group>"; };
+		462AD1A81DBFE481001091F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		462AD1AD1DBFE481001091F9 /* Hydration TrainerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hydration TrainerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		462AD1B11DBFE481001091F9 /* Hydration_TrainerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydration_TrainerUITests.swift; sourceTree = "<group>"; };
+		462AD1B31DBFE481001091F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		462AD1881DBFE481001091F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462AD19F1DBFE481001091F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462AD1AA1DBFE481001091F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		462AD1821DBFE481001091F9 = {
+			isa = PBXGroup;
+			children = (
+				462AD18D1DBFE481001091F9 /* Hydration Trainer */,
+				462AD1A51DBFE481001091F9 /* Hydration TrainerTests */,
+				462AD1B01DBFE481001091F9 /* Hydration TrainerUITests */,
+				462AD18C1DBFE481001091F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		462AD18C1DBFE481001091F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				462AD18B1DBFE481001091F9 /* Hydration Trainer.app */,
+				462AD1A21DBFE481001091F9 /* Hydration TrainerTests.xctest */,
+				462AD1AD1DBFE481001091F9 /* Hydration TrainerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		462AD18D1DBFE481001091F9 /* Hydration Trainer */ = {
+			isa = PBXGroup;
+			children = (
+				462AD18E1DBFE481001091F9 /* AppDelegate.swift */,
+				462AD1901DBFE481001091F9 /* ViewController.swift */,
+				462AD1921DBFE481001091F9 /* Main.storyboard */,
+				462AD1981DBFE481001091F9 /* Assets.xcassets */,
+				462AD19A1DBFE481001091F9 /* LaunchScreen.storyboard */,
+				462AD19D1DBFE481001091F9 /* Info.plist */,
+				462AD1951DBFE481001091F9 /* Hydration_Trainer.xcdatamodeld */,
+			);
+			path = "Hydration Trainer";
+			sourceTree = "<group>";
+		};
+		462AD1A51DBFE481001091F9 /* Hydration TrainerTests */ = {
+			isa = PBXGroup;
+			children = (
+				462AD1A61DBFE481001091F9 /* Hydration_TrainerTests.swift */,
+				462AD1A81DBFE481001091F9 /* Info.plist */,
+			);
+			path = "Hydration TrainerTests";
+			sourceTree = "<group>";
+		};
+		462AD1B01DBFE481001091F9 /* Hydration TrainerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				462AD1B11DBFE481001091F9 /* Hydration_TrainerUITests.swift */,
+				462AD1B31DBFE481001091F9 /* Info.plist */,
+			);
+			path = "Hydration TrainerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		462AD18A1DBFE481001091F9 /* Hydration Trainer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 462AD1B61DBFE481001091F9 /* Build configuration list for PBXNativeTarget "Hydration Trainer" */;
+			buildPhases = (
+				462AD1871DBFE481001091F9 /* Sources */,
+				462AD1881DBFE481001091F9 /* Frameworks */,
+				462AD1891DBFE481001091F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hydration Trainer";
+			productName = "Hydration Trainer";
+			productReference = 462AD18B1DBFE481001091F9 /* Hydration Trainer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		462AD1A11DBFE481001091F9 /* Hydration TrainerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 462AD1B91DBFE481001091F9 /* Build configuration list for PBXNativeTarget "Hydration TrainerTests" */;
+			buildPhases = (
+				462AD19E1DBFE481001091F9 /* Sources */,
+				462AD19F1DBFE481001091F9 /* Frameworks */,
+				462AD1A01DBFE481001091F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				462AD1A41DBFE481001091F9 /* PBXTargetDependency */,
+			);
+			name = "Hydration TrainerTests";
+			productName = "Hydration TrainerTests";
+			productReference = 462AD1A21DBFE481001091F9 /* Hydration TrainerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		462AD1AC1DBFE481001091F9 /* Hydration TrainerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 462AD1BC1DBFE481001091F9 /* Build configuration list for PBXNativeTarget "Hydration TrainerUITests" */;
+			buildPhases = (
+				462AD1A91DBFE481001091F9 /* Sources */,
+				462AD1AA1DBFE481001091F9 /* Frameworks */,
+				462AD1AB1DBFE481001091F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				462AD1AF1DBFE481001091F9 /* PBXTargetDependency */,
+			);
+			name = "Hydration TrainerUITests";
+			productName = "Hydration TrainerUITests";
+			productReference = 462AD1AD1DBFE481001091F9 /* Hydration TrainerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		462AD1831DBFE481001091F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Ian Kohlert";
+				TargetAttributes = {
+					462AD18A1DBFE481001091F9 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = J5ALG5SFD4;
+						ProvisioningStyle = Automatic;
+					};
+					462AD1A11DBFE481001091F9 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = J5ALG5SFD4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 462AD18A1DBFE481001091F9;
+					};
+					462AD1AC1DBFE481001091F9 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = J5ALG5SFD4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 462AD18A1DBFE481001091F9;
+					};
+				};
+			};
+			buildConfigurationList = 462AD1861DBFE481001091F9 /* Build configuration list for PBXProject "Hydration Trainer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 462AD1821DBFE481001091F9;
+			productRefGroup = 462AD18C1DBFE481001091F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				462AD18A1DBFE481001091F9 /* Hydration Trainer */,
+				462AD1A11DBFE481001091F9 /* Hydration TrainerTests */,
+				462AD1AC1DBFE481001091F9 /* Hydration TrainerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		462AD1891DBFE481001091F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462AD19C1DBFE481001091F9 /* LaunchScreen.storyboard in Resources */,
+				462AD1991DBFE481001091F9 /* Assets.xcassets in Resources */,
+				462AD1941DBFE481001091F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462AD1A01DBFE481001091F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462AD1AB1DBFE481001091F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		462AD1871DBFE481001091F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462AD1911DBFE481001091F9 /* ViewController.swift in Sources */,
+				462AD18F1DBFE481001091F9 /* AppDelegate.swift in Sources */,
+				462AD1971DBFE481001091F9 /* Hydration_Trainer.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462AD19E1DBFE481001091F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462AD1A71DBFE481001091F9 /* Hydration_TrainerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462AD1A91DBFE481001091F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462AD1B21DBFE481001091F9 /* Hydration_TrainerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		462AD1A41DBFE481001091F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 462AD18A1DBFE481001091F9 /* Hydration Trainer */;
+			targetProxy = 462AD1A31DBFE481001091F9 /* PBXContainerItemProxy */;
+		};
+		462AD1AF1DBFE481001091F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 462AD18A1DBFE481001091F9 /* Hydration Trainer */;
+			targetProxy = 462AD1AE1DBFE481001091F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		462AD1921DBFE481001091F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				462AD1931DBFE481001091F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		462AD19A1DBFE481001091F9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				462AD19B1DBFE481001091F9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		462AD1B41DBFE481001091F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		462AD1B51DBFE481001091F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		462AD1B71DBFE481001091F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J5ALG5SFD4;
+				INFOPLIST_FILE = "Hydration Trainer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aestusfuturistics.Hydration-Trainer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		462AD1B81DBFE481001091F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J5ALG5SFD4;
+				INFOPLIST_FILE = "Hydration Trainer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aestusfuturistics.Hydration-Trainer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		462AD1BA1DBFE481001091F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = J5ALG5SFD4;
+				INFOPLIST_FILE = "Hydration TrainerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aestusfuturistics.Hydration-TrainerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hydration Trainer.app/Hydration Trainer";
+			};
+			name = Debug;
+		};
+		462AD1BB1DBFE481001091F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = J5ALG5SFD4;
+				INFOPLIST_FILE = "Hydration TrainerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aestusfuturistics.Hydration-TrainerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hydration Trainer.app/Hydration Trainer";
+			};
+			name = Release;
+		};
+		462AD1BD1DBFE481001091F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = J5ALG5SFD4;
+				INFOPLIST_FILE = "Hydration TrainerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aestusfuturistics.Hydration-TrainerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Hydration Trainer";
+			};
+			name = Debug;
+		};
+		462AD1BE1DBFE481001091F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = J5ALG5SFD4;
+				INFOPLIST_FILE = "Hydration TrainerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aestusfuturistics.Hydration-TrainerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Hydration Trainer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		462AD1861DBFE481001091F9 /* Build configuration list for PBXProject "Hydration Trainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462AD1B41DBFE481001091F9 /* Debug */,
+				462AD1B51DBFE481001091F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		462AD1B61DBFE481001091F9 /* Build configuration list for PBXNativeTarget "Hydration Trainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462AD1B71DBFE481001091F9 /* Debug */,
+				462AD1B81DBFE481001091F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		462AD1B91DBFE481001091F9 /* Build configuration list for PBXNativeTarget "Hydration TrainerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462AD1BA1DBFE481001091F9 /* Debug */,
+				462AD1BB1DBFE481001091F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		462AD1BC1DBFE481001091F9 /* Build configuration list for PBXNativeTarget "Hydration TrainerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462AD1BD1DBFE481001091F9 /* Debug */,
+				462AD1BE1DBFE481001091F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		462AD1951DBFE481001091F9 /* Hydration_Trainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				462AD1961DBFE481001091F9 /* Hydration_Trainer.xcdatamodel */,
+			);
+			currentVersion = 462AD1961DBFE481001091F9 /* Hydration_Trainer.xcdatamodel */;
+			path = Hydration_Trainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 462AD1831DBFE481001091F9 /* Project object */;
+}
