@@ -18,6 +18,11 @@ class Interval {
     var goalPerInterval = 0
     var metGoal: Bool = false
     var intervalStartTimeInSecondsSinceStart: Int = 0
+    var isNotificationInterval = false
+    var notificationIdentifier = ""
+    
+    
+    
     //    var totalNumberOfIntervals = 0
     
     
@@ -45,6 +50,10 @@ class Interval {
         return intervalStartTimeInSecondsSinceStart
     }
     
+    func getIntervalNotificationIdentifier() -> String {
+        return notificationIdentifier
+    }
+    
     
     func labelIntervals(whichInterval: Int, interval: Interval) {
         interval.whichInterval = whichInterval
@@ -65,7 +74,15 @@ class Interval {
     //    }
     
     
+    func addNotificationIdentifier(identifier: String) {
+        notificationIdentifier = identifier
+    }
     
+    func setIsNotificationHour(interval: Int, numberOfIntervals: Int) {
+        if interval < numberOfIntervals && interval != 0{
+            isNotificationInterval = true
+        }
+    }
     
     var total = 0
     func addGoalPerInterval(interval: Interval, goal: Int) {

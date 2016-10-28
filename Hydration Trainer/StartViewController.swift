@@ -15,7 +15,7 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
         
-        var blurEffectView = UIVisualEffectView(effect: blurEffect)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
         //        view.addSubview(blurEffectView)
@@ -35,7 +35,7 @@ class StartViewController: UIViewController {
     
     @IBAction func startDay(_ sender: AnyObject) {
         UserDefaults.standard.set("Start", forKey: "startDay")
-        print(UserDefaults.standard.object(forKey: "startDay"))
+//        print(UserDefaults.standard.object(forKey: "startDay") ?? <#default value#>)
         self.dismiss(animated: true, completion: nil)
     }
 }

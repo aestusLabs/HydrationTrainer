@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
 
@@ -83,11 +84,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         setTomorrowsDate()
         startDay()
         
-        
+        UNUserNotificationCenter.current().delegate = self
+
+        interactionTest()
+        notificationTesting()
         
         
     }
@@ -107,9 +110,16 @@ class ViewController: UIViewController {
         
     }
     
+//    func userNotifcationCenter(_ center: UNUserNotifcationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: () -> Void) {
+//        
+//    }
     
     
     @IBAction func addWater(_ sender: AnyObject) {
+       addCurrentAmountToTotal()
+    }
+    
+    func addCurrentAmountToTotal() {
         totalWaterConsumed += currentAmountToAdd
         let currentInterval = getCurrentInterval()
         currentInterval.amountWaterConsumed += currentAmountToAdd
@@ -160,9 +170,6 @@ class ViewController: UIViewController {
     
     
     ///////Start Up Functions
-    // list of variables set up:
-    //-
-    //-
     
     
     func updateInfo() {
@@ -217,14 +224,264 @@ class ViewController: UIViewController {
         let array = getArrayOfIntervals()
         for x in array {
             print(x.whichInterval)
+            print(x.notificationIdentifier)
+            print(x.isNotificationInterval)
             print(x.isTrackHour)
             print(x.intervalStartTimeInSecondsSinceStart)
             print(x.goalPerInterval)
             print(x.amountOfWaterToAddPerPress)
             print(" ")
         }
+
+        /// Below is trying to get the scheduled notifications to print
+       // print(UIApplication.shared.scheduledLocalNotifications)
+        let center = UNUserNotificationCenter.current()
+        print(center.getPendingNotificationRequests(completionHandler: { error in
+            // error handling here.
+        }))
+    }
+    
+    
+    
+    
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    //                 Notification Related Functions
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    
+    
+    
+    let arrayOfNotificationIdentifiers = ["notification1", "notification2", "notification3", "notification4", "notification5", "notification6", "notification7", "notification8", "notification9", "notification10", "notification11", "notification12", "notification13", "notification14", "notification15", "notification16", "notification17", "notification18", "notification19", "notification20", "notification21", "notification22", "notification23", "notification24"]
+    
+    
+    
+    
+//    func setPaceNotifications() {
+//        // Start up I'll do all intervals I track
+//        let arrayOfIntervals = getArrayOfIntervals()
+//        
+//        for interval in arrayOfIntervals {
+//            
+//            // below will go to iterate through intervals array
+//            if interval.isNotificationInterval {
+//                let notification = getNotificationForInterval(interval: interval.getWhichInterval())
+//                setNotification(notification: notification, fireTime: interval.getIntervalStartTimeInSeconds(), identifier: interval.getIntervalNotificationIdentifier())
+//            }
+//        }
+//        
+//    }
+    
+    
+
+    func getNotificationForInterval(interval: Int) -> UNMutableNotificationContent {
+        let paceNotification1 = UNMutableNotificationContent()
+        let paceNotification2 = UNMutableNotificationContent()
+        let paceNotification3 = UNMutableNotificationContent()
+        let paceNotification4 = UNMutableNotificationContent()
+        let paceNotification5 = UNMutableNotificationContent()
+        let paceNotification6 = UNMutableNotificationContent()
+        let paceNotification7 = UNMutableNotificationContent()
+        let paceNotification8 = UNMutableNotificationContent()
+        let paceNotification9 = UNMutableNotificationContent()
+        let paceNotification10 = UNMutableNotificationContent()
+        let paceNotification11 = UNMutableNotificationContent()
+        let paceNotification12 = UNMutableNotificationContent()
+        let paceNotification13 = UNMutableNotificationContent()
+        let paceNotification14 = UNMutableNotificationContent()
+        let paceNotification15 = UNMutableNotificationContent()
+        let paceNotification16 = UNMutableNotificationContent()
+        let paceNotification17 = UNMutableNotificationContent()
+        let paceNotification18 = UNMutableNotificationContent()
+        let paceNotification19 = UNMutableNotificationContent()
+        let paceNotification20 = UNMutableNotificationContent()
+        let paceNotification21 = UNMutableNotificationContent()
+        let paceNotification22 = UNMutableNotificationContent()
+        let paceNotification23 = UNMutableNotificationContent()
+        // maybe move everything above out to the VC if it doesn't notifiy me at 12:15
+        
+        
+        if interval == 1 {
+            return paceNotification1
+        } else if interval == 2 {
+            return paceNotification2
+        } else if interval == 3 {
+            return paceNotification3
+        } else if interval == 4 {
+            return paceNotification4
+        } else if interval == 5 {
+            return paceNotification5
+        } else if interval == 6 {
+            return paceNotification6
+        } else if interval == 7 {
+            return paceNotification7
+        } else if interval == 8 {
+            return paceNotification8
+        } else if interval == 9 {
+            return paceNotification9
+        } else if interval == 10 {
+            return paceNotification10
+        } else if interval == 11 {
+            return paceNotification11
+        } else if interval == 12 {
+            return paceNotification12
+        } else if interval == 13 {
+            return paceNotification13
+        } else if interval == 14 {
+            return paceNotification14
+        } else if interval == 15 {
+            return paceNotification15
+        } else if interval == 16 {
+            return paceNotification16
+        } else if interval == 17 {
+            return paceNotification17
+        } else if interval == 18 {
+            return paceNotification18
+        } else if interval == 19 {
+            return paceNotification19
+        } else if interval == 20 {
+            return paceNotification20
+        } else if interval == 21 {
+            return paceNotification21
+        } else if interval == 22 {
+            return paceNotification22
+        } else {
+            return paceNotification23
+        }
         
     }
+    
+    // Maybe I should only send like 4 notifications for pace increases. So if the first 3 are ignored the 4th says something like, "Turning off notifications until you open the app again."
+    let testNotification = UNMutableNotificationContent()
+    func notificationTesting() {
+        let content = testNotification
+        content.title = "This is a test."
+        content.body = "Drink \(currentAmountToAdd)."
+        content.categoryIdentifier = "addWaterCategory"
+        content.sound = UNNotificationSound.default()
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let requestIdentifier = "testNotification"
+        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+        
+        
+        
+        
+       
+        
+        
+        
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            
+            if let error = error {
+                print("Error with repeating notification setting. \(error)")
+            }
+        }
+
+    }
+    
+    func interactionTest() {
+        let addAndGoAction = UNNotificationAction(identifier: "addWaterAndGoInteraction", title: "Add \(currentAmountToAdd)ml and launch app", options: [.foreground])
+        let addWaterAction = UNNotificationAction(identifier: "addWaterInteraction", title: "Add \(currentAmountToAdd)ml", options: [])
+        //        change options to 'options: [.forground] to launch app
+
+        let category = UNNotificationCategory(identifier: "addWaterCategory", actions: [addAndGoAction, addWaterAction], intentIdentifiers: [], options: [])
+        //intentidentifier is for SiriKit
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        
+        
+    }
+    
+    func setNotification(notification: UNMutableNotificationContent, fireTime: Int, identifier: String, paceGoal: Int) {
+            let content = notification
+            content.title = "You need to drink some water"
+            content.body = "Your goal pace has just increased to \(paceGoal)ml"
+            content.categoryIdentifier = "addWaterCategory"
+        content.sound = UNNotificationSound.default()
+
+        
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(fireTime), repeats: false)
+        
+            let requestIdentifier = identifier
+            let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+        
+            UNUserNotificationCenter.current().add(request) { (error) in
+                
+                if let error = error {
+                    print("Uh oh! We had an error: \(error)")
+                }
+            }
+        }
+    
+    let repeatingNotification = UNMutableNotificationContent()
+    func setRepeatingNotification(howOften: Int) {
+        let content = repeatingNotification
+        content.title = "Drink water, you unhydrated bastard."
+        content.body = "I'm going to keep annoying you until you do."
+        content.categoryIdentifier = "addWaterCategory"
+        content.sound = UNNotificationSound.default()
+
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 900, repeats: true)
+        
+        let requestIdentifier = "repeatingNotification"
+        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+        
+        
+        
+        
+        let addWaterAction = UNNotificationAction(identifier: "addWaterInteraction", title: "Add \(currentAmountToAdd)", options: [])
+        
+        let category = UNNotificationCategory(identifier: "addWaterCategory", actions: [addWaterAction], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+
+        content.categoryIdentifier = "addWaterCategory"
+        
+        
+        
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            
+            if let error = error {
+                print("Error with repeating notification setting. \(error)")
+            }
+        }
+        
+        // add foreground action take them to app
+        //maybe a dismiss action
+        // check that it is displaying the correct current amount to add
+        
+        
+        
+        // Not sure if this is the right place: 
+//        addNotificationInteractions()
+    }
+    
+    func addNotificationInteractions() {
+        let addWaterAction = UNNotificationAction(identifier: "addWaterInteraction", title: "Add \(currentAmountToAdd)", options: [])
+        
+        let category = UNNotificationCategory(identifier: "addWaterCategory", actions: [addWaterAction], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+    }
+    
+    
+    func checkIfCancelRepeatingReminder() {
+        let currentInterval = getCurrentInterval()
+        if totalWaterConsumed >= currentInterval.getGoalPerInterval() {
+            cancelNotification(notificationIdentifier: "repeatingNotification")
+        }
+    }
+    
+    func cancelNotification(notificationIdentifier: String) {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [notificationIdentifier])
+    }
+    
+    func deleteOldNotificationsFromNC() {
+        // So this will fire when they launch the app, meaning they have no need of the old notifications
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+    }
+    
+    // delete old pace notifications upon launching the app again
     
     
     
@@ -367,6 +624,7 @@ class ViewController: UIViewController {
             var arrayOfIntervalGoals = setUpPerIntervalGoalArray()
             var arrayOfIntervalStartTimes = settingUpIntervalStartTimes()
             var arrayOfPressAmounts = setAmountPerPress()
+            var numberOfIntervals = getNumberOfIntervals()
             
             for x in arrayOfIntervals {
                 x.labelIntervals(whichInterval: count, interval: x)
@@ -375,6 +633,16 @@ class ViewController: UIViewController {
                 x.addIntervalStartTimes(interval: x, timeInSeconds: arrayOfIntervalStartTimes[count])
                 x.addGoalPerInterval(interval: x, goal: arrayOfIntervalGoals[count])
                 x.addAmountOfWaterToAddPerPress(amount: arrayOfPressAmounts[count])
+                
+                x.addNotificationIdentifier(identifier: arrayOfNotificationIdentifiers[count])
+                x.setIsNotificationHour(interval: count, numberOfIntervals: numberOfIntervals)
+                
+                
+                
+                if x.isNotificationInterval {
+                    let notification = getNotificationForInterval(interval: x.getWhichInterval())
+                    setNotification(notification: notification, fireTime: x.getIntervalStartTimeInSeconds(), identifier: x.getIntervalNotificationIdentifier(), paceGoal: x.getGoalPerInterval())
+                }
                 count += 1
             }
         }
@@ -556,3 +824,19 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        switch response.actionIdentifier {
+        case "addWaterInteraction":
+            addCurrentAmountToTotal()
+        case "addWaterAndGoInteraction":
+            addCurrentAmountToTotal()
+        default:
+            print("Error")
+        }
+    }
+}
