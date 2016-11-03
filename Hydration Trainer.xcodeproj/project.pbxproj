@@ -18,6 +18,9 @@
 		462AD1C01DBFE4B5001091F9 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AD1BF1DBFE4B5001091F9 /* Time.swift */; };
 		462AD1C21DBFE4CD001091F9 /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AD1C11DBFE4CD001091F9 /* Interval.swift */; };
 		462AD1C41DBFE4F5001091F9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AD1C31DBFE4F4001091F9 /* StartViewController.swift */; };
+		46325F3A1DC3E4150032C35C /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46325F391DC3E4150032C35C /* ViewControllerTests.swift */; };
+		46325F3C1DC7D2820032C35C /* TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46325F3B1DC7D2820032C35C /* TimeTests.swift */; };
+		46750F121DC933E600599F72 /* IntervalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46750F111DC933E600599F72 /* IntervalTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		462AD1BF1DBFE4B5001091F9 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		462AD1C11DBFE4CD001091F9 /* Interval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
 		462AD1C31DBFE4F4001091F9 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		46325F391DC3E4150032C35C /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		46325F3B1DC7D2820032C35C /* TimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTests.swift; sourceTree = "<group>"; };
+		46750F111DC933E600599F72 /* IntervalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,9 @@
 			children = (
 				462AD1A61DBFE481001091F9 /* Hydration_TrainerTests.swift */,
 				462AD1A81DBFE481001091F9 /* Info.plist */,
+				46325F391DC3E4150032C35C /* ViewControllerTests.swift */,
+				46325F3B1DC7D2820032C35C /* TimeTests.swift */,
+				46750F111DC933E600599F72 /* IntervalTests.swift */,
 			);
 			path = "Hydration TrainerTests";
 			sourceTree = "<group>";
@@ -287,6 +296,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46325F3C1DC7D2820032C35C /* TimeTests.swift in Sources */,
+				46325F3A1DC3E4150032C35C /* ViewControllerTests.swift in Sources */,
+				46750F121DC933E600599F72 /* IntervalTests.swift in Sources */,
 				462AD1A71DBFE481001091F9 /* Hydration_TrainerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

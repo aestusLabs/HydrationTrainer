@@ -193,6 +193,8 @@ class ViewController: UIViewController {
         
         
         iterateThroughIntervals(arrayOfIntervals: getArrayOfIntervals())
+//       Aboce code is commented out because of crashing
+        
         
         updateInfo()
         
@@ -626,6 +628,7 @@ class ViewController: UIViewController {
             var arrayOfPressAmounts = setAmountPerPress()
             var numberOfIntervals = getNumberOfIntervals()
             
+            print(numberOfIntervals)
             for x in arrayOfIntervals {
                 x.labelIntervals(whichInterval: count, interval: x)
                 //PROBLEM IF It's after 12 and the bed time is 2 am. Figure this out
@@ -640,75 +643,94 @@ class ViewController: UIViewController {
                 
                 
                 if x.isNotificationInterval {
+                    
                     let notification = getNotificationForInterval(interval: x.getWhichInterval())
+                    print(notification)
+                    print(x.getIntervalStartTimeInSeconds())
+                    print(x.getIntervalNotificationIdentifier())
+                    print(x.getGoalPerInterval())
                     setNotification(notification: notification, fireTime: x.getIntervalStartTimeInSeconds(), identifier: x.getIntervalNotificationIdentifier(), paceGoal: x.getGoalPerInterval())
                 }
                 count += 1
             }
-        }
-        func settingUpIntervalStartTimes() -> [Int]{
-            var arrayOfIntervalStartTimes = [0, 3600]
-            
-            let totalNumberOfIntervals = getNumberOfIntervals()
-            //        setUpTimeObjects()
-            
-            let startTimeInSeconds = startTime.getTimeInSeconds()
-            let bedTimeInSeconds = bedTime.getTimeInSeconds()
-            let totalSecondsPlannedAwake = bedTimeInSeconds - startTimeInSeconds
-            let timeAfterFirstInterval = totalSecondsPlannedAwake - 3600
-            
-            
-            let intervalLength = timeAfterFirstInterval / totalNumberOfIntervals
-            
-            
-            var total = 3600
-            for _ in 1..<24{
-                let newTotal = total + intervalLength
-                total = newTotal
-                
-                arrayOfIntervalStartTimes.append(newTotal)
-            }
-            
-            
-            return arrayOfIntervalStartTimes
             
         }
         
         
-        func setUpPerIntervalGoalArray() -> [Int]{
+        
+        
+        
+        
+        
+       
+        
+        
+        
+    }
+    
+    func settingUpIntervalStartTimes() -> [Int]{
+        var arrayOfIntervalStartTimes = [0, 3600]
+        
+        let totalNumberOfIntervals = getNumberOfIntervals()
+        //        setUpTimeObjects()
+        
+        let startTimeInSeconds = startTime.getTimeInSeconds()
+        let bedTimeInSeconds = bedTime.getTimeInSeconds()
+        let totalSecondsPlannedAwake = bedTimeInSeconds - startTimeInSeconds
+        let timeAfterFirstInterval = totalSecondsPlannedAwake - 3600
+        
+        
+        let intervalLength = timeAfterFirstInterval / totalNumberOfIntervals
+        
+        
+        var total = 3600
+        for _ in 1..<24{
+            let newTotal = total + intervalLength
+            total = newTotal
             
-            var total = goal / 5
-            
-            let totalNumberOfIntervals = getNumberOfIntervals()
-            let amountToAdd = (goal - (goal / 5)) / (totalNumberOfIntervals - 1)
-            var arrayOfIntervalGoals: [Int] = []
-            
-            for _ in 1...totalNumberOfIntervals {
-                arrayOfIntervalGoals.append(total)
-                total += amountToAdd
-            }
-            
-            for _ in arrayOfIntervalGoals.count...24 {
-                arrayOfIntervalGoals.append(0)
-            }
-            
-            
-            return arrayOfIntervalGoals
+            arrayOfIntervalStartTimes.append(newTotal)
         }
         
-        func setAmountPerPress() -> [Int] {
-            var arrayOfPressAmounts: [Int] = []
-            var total = goal / 5 / 4
-            let totalNumberOfIntervals = getNumberOfIntervals()
-            let amountToAdd = (goal - (goal / 5)) / (totalNumberOfIntervals - 1)
-            for _ in 1...24 {
-                arrayOfPressAmounts.append(total)
-                total = amountToAdd
-            }
-            return arrayOfPressAmounts
+        
+        return arrayOfIntervalStartTimes
+        
+    }
+    
+    func setUpPerIntervalGoalArray() -> [Int]{
+        
+        var total = goal / 5
+        
+        let totalNumberOfIntervals = getNumberOfIntervals()
+        let amountToAdd = (goal - (goal / 5)) / (totalNumberOfIntervals - 1)
+        var arrayOfIntervalGoals: [Int] = []
+        
+        for _ in 1...totalNumberOfIntervals {
+            arrayOfIntervalGoals.append(total)
+            total += amountToAdd
         }
         
-        func getNumberOfIntervals() -> Int{
+        for _ in arrayOfIntervalGoals.count...24 {
+            arrayOfIntervalGoals.append(0)
+        }
+        
+        
+        return arrayOfIntervalGoals
+    }
+    
+    func setAmountPerPress() -> [Int] {
+        var arrayOfPressAmounts: [Int] = []
+        var total = goal / 5 / 4
+        let totalNumberOfIntervals = getNumberOfIntervals()
+        let amountToAdd = (goal - (goal / 5)) / (totalNumberOfIntervals - 1)
+        for _ in 1...24 {
+            arrayOfPressAmounts.append(total)
+            total = amountToAdd
+        }
+        return arrayOfPressAmounts
+    }
+    
+    func getNumberOfIntervals() -> Int{
+            
             var numberOfIntervals = 0
             
             if bedTime.day != startTime.day {
@@ -721,13 +743,25 @@ class ViewController: UIViewController {
             }
             return numberOfIntervals
         }
+    
+    
+    
+    func setUpTestTimeObjects() {
+        
+        startTime.year = 2016
+        startTime.month = 11
+        startTime.day = 1
+        startTime.hour = 9
+        startTime.minute = 0
+    
+        bedTime.year = 2016
+        bedTime.month = 11
+        bedTime.day = 2
+        bedTime.hour = 2
+        bedTime.minute = 0
+        
         
     }
-    
-    
-    
-    
-    
     
     
     
